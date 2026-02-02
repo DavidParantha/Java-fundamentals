@@ -1,0 +1,10 @@
+package Encapulation;
+
+public class finalDisscussion {
+    public static void main(String []args){
+        final float P1 = 3.14159f;
+            final int VALUE_OF_DOZEN;
+            VALUE_OF_DOZEN=12;
+            System.out.println(VALUE_OF_DOZEN);
+    }
+}

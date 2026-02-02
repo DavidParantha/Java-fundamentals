@@ -1,0 +1,16 @@
+//package basics;
+//
+//import java.util.Scanner;
+//public class arms {
+//    Scanner sc= new Scanner(System.in);
+//    int num;
+//    int sum=0;
+//    while(>0){
+//        int digits = String.tovalue(num).length()
+//        digits=num%10;
+//        sum=sum+math.pow(digit,digits);
+//        num=num/10;
+//    }
+//
+//}
+//}
