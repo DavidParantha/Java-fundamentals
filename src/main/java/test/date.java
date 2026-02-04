@@ -1,21 +1,47 @@
 package test;
-
 import java.util.Scanner;
-
+import java.time.LocalDate;
 public class date {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        //System.out.println("DD - YY - YYYY");
-        String DD =sc.nextLine();
-        String YY=sc.nextLine();
-        String yyyy =  sc.nextLine();
-        int l= Integer.parseInt(yyyy);
 
-        System.out.println("  " + DD + " - " + YY + " - " + yyyy);
-        if((l % 4 == 0 && l % 100 != 0 || (l % 400 ==0))) {
-            System.out.println("Leap Year");
-        }else {
-            System.out.println("Not a Leap Year");
-        }
+    static boolean checkLeapUsingSplit(String input) {
+
+        String[] parts = input.split("-");
+        int year = Integer.parseInt(parts[2]);
+
+        boolean isLeapYear =
+                (year % 4 == 0 && year % 100 != 0)
+                        || (year % 400 == 0);
+
+        return isLeapYear;
     }
 }
+//import java.time.format.DateTimeFormatter;
+//
+//public class date {
+////
+//
+//    // Method 1: Using substring / year logic
+//    static boolean checkLeapUsingString(String yearString) {
+//        int year = Integer.parseInt(yearString);
+//
+//        boolean isLeapYear =
+//                (year % 4 == 0 && year % 100 != 0)
+//                        || (year % 400 == 0);
+//
+//        return isLeapYear;
+//    }
+//
+//    // Method 2: Using LocalDate (as in your image)
+//    static boolean checkLeapUsingLocalDate(String input) {
+//
+//        DateTimeFormatter formatter =
+//                DateTimeFormatter.ofPattern("dd-MM-yyyy");
+//
+//        LocalDate date = LocalDate.parse(input, formatter);
+//
+//        boolean isLeapYear = date.isLeapYear();
+//
+//        return isLeapYear;
+//    }
+//}
+
